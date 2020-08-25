@@ -21,10 +21,10 @@ exports.sion = async message => {
         const dispatcher = connection.play(`./commands/sionSounds/${soundName}`);
         dispatcher.on('start', () => {
             dispatcher.setVolume(0.15);
-            console.log('audio.mp3 is now playing!');
+            console.log('sion.mp3 is now playing!');
         });
         dispatcher.on('finish', () => {
-            console.log('audio.mp3 has finished playing!');
+            console.log('sion.mp3 has finished playing!');
             connection.disconnect();
         });
         // Always remember to handle errors appropriately!

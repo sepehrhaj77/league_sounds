@@ -4,6 +4,8 @@ const { prefix, token } = require('./config.json');
 const { OpusEncoder } = require('@discordjs/opus');
 const { phreak } = require('./commands/phreak');
 const { sion } = require('./commands/sion');
+const { rl } = require('./commands/rl');
+const { bruh } = require('./commands/bruh');
 
 const encoder = new OpusEncoder(48000, 2);
 
@@ -34,6 +36,16 @@ client.on('message', async message => {
     //sion ult
     else if (command === 'sion'){
         sion(message);
+    }
+
+    //this is rocket league
+    else if (command === 'rl'){
+        rl(message);
+    }
+
+    //bruh
+    else if (command === 'bruh'){
+        bruh(message);
     }
 
 });
