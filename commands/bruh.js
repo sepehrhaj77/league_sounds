@@ -4,7 +4,7 @@ exports.bruh = async message => {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./bruh.mp3');
         dispatcher.on('start', () => {
-            dispatcher.setVolume(2.0);
+            dispatcher.setVolume(.5);
             console.log('bruh.mp3 is now playing!');
         });
         dispatcher.on('finish', () => {
