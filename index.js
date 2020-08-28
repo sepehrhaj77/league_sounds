@@ -7,11 +7,6 @@ const { sion } = require('./commands/sion');
 const { rl } = require('./commands/rl');
 const { bruh } = require('./commands/bruh');
 
-//ffmpeg stuff
-const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
-const spawn = require('child_process').spawn;
-const ffmpeg = spawn(ffmpegPath);
-
 const encoder = new OpusEncoder(48000, 2);
 
 
