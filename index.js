@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { prefix, token } = require('./config.json');
 const { OpusEncoder } = require('@discordjs/opus');
 const { phreak } = require('./commands/phreak');
 const { sion } = require('./commands/sion');
 const { rl } = require('./commands/rl');
 const { bruh } = require('./commands/bruh');
+const prefix = process.env.prefix;
 
 const encoder = new OpusEncoder(48000, 2);
 
@@ -16,7 +16,7 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
 
 client.on('message', async message => {
     //if the message doesn't begin with '!' or it is from a bot account, do not consider it as a possible command
