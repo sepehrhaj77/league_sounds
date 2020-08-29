@@ -1,14 +1,14 @@
-exports.phreak = async message => {
+exports.cait = async message => {
     const channel = message.member.voice.channel;
     if(channel){
         const connection = await message.member.voice.channel.join();
-        const dispatcher = connection.play('./phreakQuadra.mp3');
+        const dispatcher = connection.play('./cait.mp3');
         dispatcher.on('start', () => {
             dispatcher.setVolume(1.0);
-            console.log('phreak.mp3 is now playing!');
+            console.log('cait.mp3 is now playing!');
         });
         dispatcher.on('finish', () => {
-            console.log('phreak.mp3 has finished playing!');
+            console.log('cait.mp3 has finished playing!');
             connection.disconnect();
         });
         // Always remember to handle errors appropriately!

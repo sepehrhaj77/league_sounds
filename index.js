@@ -5,6 +5,7 @@ const { phreak } = require('./commands/phreak');
 const { sion } = require('./commands/sion');
 const { rl } = require('./commands/rl');
 const { bruh } = require('./commands/bruh');
+const { cait } = require('./commands/cait');
 const prefix = process.env.prefix;
 
 const encoder = new OpusEncoder(48000, 2);
@@ -46,6 +47,11 @@ client.on('message', async message => {
     //bruh
     else if (command === 'bruh'){
         bruh(message);
+    }
+
+    //cait
+    else if (command === 'cait'){
+        cait(message);
     }
 
 });
