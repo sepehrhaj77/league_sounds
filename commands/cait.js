@@ -2,7 +2,7 @@ exports.cait = async message => {
     const channel = message.member.voice.channel;
     if(channel){
         const connection = await message.member.voice.channel.join();
-        const dispatcher = connection.play('./cait.mp3');
+        const dispatcher = connection.play('./caitSounds.mp3');
         dispatcher.on('start', () => {
             dispatcher.setVolume(1.0);
             console.log('cait.mp3 is now playing!');
