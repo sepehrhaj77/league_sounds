@@ -2,7 +2,7 @@ exports.jeff = async message => {
     const channel = message.member.voice.channel;
     if(channel){
         const connection = await message.member.voice.channel.join();
-        const dispatcher = connection.play('./jeff.mp3');
+        const dispatcher = connection.play('./nameJeff.mp3');
         dispatcher.on('start', () => {
             dispatcher.setVolume(1.0);
             console.log('jeff.mp3 is now playing!');

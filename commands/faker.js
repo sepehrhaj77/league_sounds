@@ -4,7 +4,7 @@ exports.faker = async message => {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./faker.mp3');
         dispatcher.on('start', () => {
-            dispatcher.setVolume(1.0);
+            dispatcher.setVolume(0.7);
             console.log('faker.mp3 is now playing!');
         });
         dispatcher.on('finish', () => {
