@@ -7,7 +7,7 @@ const { rl } = require('./commands/rl');
 const { bruh } = require('./commands/bruh');
 const { jeff } = require('./commands/jeff');
 const { faker } = require('./commands/faker');
-const { mana } = require('./commands/mana.');
+const { mana } = require('./commands/mana');
 const prefix = process.env.prefix;
 
 const encoder = new OpusEncoder(48000, 2);
