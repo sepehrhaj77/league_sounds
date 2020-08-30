@@ -4,7 +4,7 @@ exports.mana = async message => {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./mana.mp3');
         dispatcher.on('start', () => {
-            dispatcher.setVolume(0.05);
+            dispatcher.setVolume(0.075);
             console.log('mana.mp3 is now playing!');
         });
         dispatcher.on('finish', () => {

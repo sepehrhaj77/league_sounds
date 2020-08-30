@@ -20,7 +20,7 @@ exports.sion = async message => {
 
         const dispatcher = connection.play(`./commands/sionSounds/${soundName}`);
         dispatcher.on('start', () => {
-            dispatcher.setVolume(0.15);
+            dispatcher.setVolume(0.10);
             console.log('sion.mp3 is now playing!');
         });
         dispatcher.on('finish', () => {
