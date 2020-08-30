@@ -5,7 +5,8 @@ const { phreak } = require('./commands/phreak');
 const { sion } = require('./commands/sion');
 const { rl } = require('./commands/rl');
 const { bruh } = require('./commands/bruh');
-const { cait } = require('./commands/cait');
+const { jeff } = require('./commands/jeff');
+const { faker } = require('./commands/faker');
 const prefix = process.env.prefix;
 
 const encoder = new OpusEncoder(48000, 2);
@@ -49,9 +50,14 @@ client.on('message', async message => {
         bruh(message);
     }
 
-    //cait
-    else if (command === 'cait'){
-        cait(message);
+    //nameJeff
+    else if (command === 'jeff'){
+        jeff(message);
+    }
+
+    //faker
+    else if (command === 'faker'){
+        faker(message);
     }
 
 });
