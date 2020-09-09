@@ -8,6 +8,7 @@ const { bruh } = require('./commands/bruh');
 const { jeff } = require('./commands/jeff');
 const { faker } = require('./commands/faker');
 const { mana } = require('./commands/mana');
+const { borat } = require('./commands/borat');
 const prefix = process.env.prefix;
 
 const encoder = new OpusEncoder(48000, 2);
@@ -66,4 +67,8 @@ client.on('message', async message => {
         mana(message);
     }
 
+    //borat very nice
+    else if (command === 'borat'){
+        borat(message);
+    }
 });
