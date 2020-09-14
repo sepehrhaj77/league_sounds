@@ -9,7 +9,8 @@ const { jeff } = require('./commands/jeff');
 const { faker } = require('./commands/faker');
 const { mana } = require('./commands/mana');
 const { borat } = require('./commands/borat');
-const prefix = process.env.prefix;
+var prefix = process.env.prefix;
+const {prefixLocal, TOKEN} = require('./config.json');
 
 const encoder = new OpusEncoder(48000, 2);
 
@@ -20,7 +21,13 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
-client.login(process.env.TOKEN);
+if(process.env.TOKEN){
+    client.login(process.env.TOKEN);
+}
+else{
+    client.login(TOKEN);
+    prefix = prefixLocal;
+}
 
 client.on('message', async message => {
     //if the message doesn't begin with '!' or it is from a bot account, do not consider it as a possible command
